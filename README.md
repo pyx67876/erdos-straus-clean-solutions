@@ -2,9 +2,9 @@
 
 This repository contains all code and data necessary to reproduce the computational verification results reported in:
 
-> **"Clean Solutions for the Erdős–Straus Conjecture: Construction and Nonexistence"**  
+> **"Clean Solutions to the Erd˝os–Straus Conjecture: A Unified Parametrization and Nonexistence of Clean Solutions for Perfect Squares n = m2 > 4"**  
 > (submitted to *Journal of Experimental Mathematics*)
-
+ 
 ## Overview
 
 We verify the sufficient condition from Theorem 4.1:
