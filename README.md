@@ -38,17 +38,23 @@ See `requirements.txt`. Key dependencies:
 
 ## How to Reproduce
 
-### 1. Install environment
+The computational results were obtained with the following environment:
 
- "python_version": "3.10.20",
- "os": "Windows 10",
- "cpu_cores": 32,
- "libraries": 
- "primesieve": "2.3.0",
- "sympy": "1.14.0",
- "numpy": "1.26.4",
- "pandas": "2.3.3",
- "matplotlib": "3.10.8",
- "tqdm": "4.67.3"
+| Component | Version |
+| :-------- | :------ |
+| **Operating System** | Windows 10 |
+| **CPU Cores** | 32 |
+| **Python** | 3.10.20 |
+| **primesieve** | 2.3.0 |
+| **sympy** | 1.14.0 |
+| **numpy** | 1.26.4 |
+| **pandas** | 2.3.3 |
+| **matplotlib** | 3.10.8 |
+| **tqdm** | 4.67.3 |
+
+To reproduce this environment, you can use the provided `requirements.txt` and run:
+
+```bash
+pip install -r requirements.txt
  
 
