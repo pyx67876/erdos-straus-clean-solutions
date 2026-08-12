@@ -42,7 +42,7 @@ The computational results were obtained with the following environment:
 
 | Component | Version |
 | :-------- | :------ |
-| **Operating System** | Windows 10 |
+| **Operating System** | Windows 11 |
 | **CPU Cores** | 32 |
 | **Python** | 3.10.20 |
 | **primesieve** | 2.3.0 |
