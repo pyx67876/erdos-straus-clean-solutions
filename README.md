@@ -1,18 +1,44 @@
-# Supplementary Materials for "A Constructive Approach to the Erdős–Straus Conjecture"
+# Clean Solutions for the Erdős–Straus Conjecture
 
-## File Descriptions
-- `verify_weak_condition.py`: Full Python code for verifying the weak condition in the r=1 parametrization.  
-   For all primes p ≡ 1 (mod 12) belonging to the 34 hardest residue classes (mod 9240) identified by Bradford & Ionascu, it searches for s ≤ 1000 and D ≡ 3 (mod 4) satisfying the condition.  
-   Outputs primes with s > 200 (consistent with Table 2 in the paper).
+This repository contains all code and data necessary to reproduce the computational verification results reported in:
 
-- `table2_large_s_primes.txt`: The 43 prime data (p, s, D, y) from Table 2 of the paper.
+> **"Clean Solutions for the Erdős–Straus Conjecture: Construction and Nonexistence"**  
+> (submitted to *Journal of Experimental Mathematics*)
+
+## Overview
+
+We verify the sufficient condition from Theorem 4.1:
+
+For primes \( p \equiv 1 \pmod{12} \), if there exist integers \( A \equiv 3 \pmod{4} \) and \( B \equiv 3 \pmod{4} \) such that \( AB-1 \mid p+A \), then a solution to \( 4/p = 1/x + 1/y + 1/z \) exists.
+
+We search for such \( (A,B) \) pairs for:
+- All \( p \equiv 1 \pmod{12} \) up to \( 10^{10} \), focusing on the 34 hardest residue classes modulo 9240.
+- All \( p \equiv 1 \pmod{24} \) up to \( 10^{12} \), as the most demanding subclass.
+
+## Repository Structure
+
+| Path | Description |
+| :--- | :--- |
+| `algorithm/` | Core search engine and parallel workers |
+| `data/raw/` | Complete `(s, B)` pairs for each verified prime |
+| `data/processed/` | Summary statistics used to generate Tables 1–2 |
+| `data/exceptional/` | Primes requiring unusually large `s` (> 2000) |
+| `scripts/` | Scripts to regenerate tables and figures |
+| `notebooks/` | Jupyter notebooks for exploratory analysis |
+| `tests/` | Unit tests for the search logic |
 
 ## Requirements
-- Python 3.8+
-- Installation: `pip install primesieve tqdm`
-- Runtime: approximately 25 minutes (multi-core CPU, range up to 10¹⁰)
 
-## Usage
-Can be directly used to reproduce the computational results in Section 6 of the paper, or as a basis for future larger-scale verification.
+See `requirements.txt`. Key dependencies:
+- Python 3.9+
+- `primesieve` (fast prime generation)
+- `sympy` (divisor enumeration)
+- `numpy`, `pandas` (data handling)
+- `matplotlib` (figure generation)
 
-Author: Yixuan Peng (2026)
+## How to Reproduce
+
+### 1. Install dependencies
+
+```bash
+pip install -r requirements.txt
