@@ -38,7 +38,17 @@ See `requirements.txt`. Key dependencies:
 
 ## How to Reproduce
 
-### 1. Install dependencies
-
-```bash
-pip install -r requirements.txt
+### 1. Install environment
+{
+  "python_version": "3.10.20",
+  "os": "Windows 10",
+  "cpu_cores": 32,
+  "libraries": {
+    "primesieve": "2.3.0",
+    "sympy": "1.14.0",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "matplotlib": "3.10.8",
+    "tqdm": "4.67.3"
+  }
+}
